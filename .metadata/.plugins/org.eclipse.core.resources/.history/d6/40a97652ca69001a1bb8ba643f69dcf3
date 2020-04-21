@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rbac:Policy xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:rbac="http://www.example.org/rbac">
+  <users name="U1" UR="//@roles.0 //@roles.1"/>
+  <users name="U1" UR="//@roles.0"/>
+  <users name="U3" UR="//@roles.1"/>
+  <roles name="R1" RD="//@demarcations.0"/>
+  <roles name="R1" RD="//@demarcations.1"/>
+  <permissions name="P1"/>
+  <permissions name="P2"/>
+  <permissions name="P3"/>
+  <permissions name="P4"/>
+  <demarcations name="D1" DP="//@permissions.0 //@permissions.1"/>
+  <demarcations name="D2" DP="//@permissions.2 //@permissions.3"/>
+</rbac:Policy>

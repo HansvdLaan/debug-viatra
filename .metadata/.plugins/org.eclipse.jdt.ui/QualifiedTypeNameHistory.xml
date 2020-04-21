@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.eclipse.equinox.app.IApplication"/>
+<fullyQualifiedTypeName name="org.eclipse.equinox.app.IApplicationContext"/>
+<fullyQualifiedTypeName name="org.eclipse.viatra.query.runtime.emf.EMFScope"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.impl.ResourceSetImpl"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.ResourceSet"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.common.util.URI"/>
+<fullyQualifiedTypeName name="org.eclipse.viatra.query.runtime.api.ViatraQueryEngine"/>
+<fullyQualifiedTypeName name="queries.TestQueries"/>
+<fullyQualifiedTypeName name="queries.RoleName"/>
+<fullyQualifiedTypeName name="org.eclipse.viatra.query.runtime.api.AdvancedViatraQueryEngine"/>
+<fullyQualifiedTypeName name="queries.SameRoleName"/>
+<fullyQualifiedTypeName name="org.eclipse.viatra.query.runtime.api.IMatchUpdateListener"/>
+<fullyQualifiedTypeName name="org.eclipse.viatra.query.runtime.api.impl.BasePatternMatch"/>
+<fullyQualifiedTypeName name="queries.DemarcationShouldHaveAPermission"/>
+<fullyQualifiedTypeName name="queries.PrerequisiteEverybodyHasAccessToLobby"/>
+<fullyQualifiedTypeName name="queries.PrerequisiteVaultImpliesOpenOffice"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="org.eclipse.viatra.query.runtime.api.impl.BaseMatcher"/>
+<fullyQualifiedTypeName name="queries.UserShouldHaveARole"/>
+<fullyQualifiedTypeName name="queries.OnlyOneOperationsManager"/>
+<fullyQualifiedTypeName name="queries.OnlyOneRnDManager"/>
+<fullyQualifiedTypeName name="queries.OnlyOneDirector"/>
+<fullyQualifiedTypeName name="queries.RoleShouldHaveADemarcation"/>
+<fullyQualifiedTypeName name="queries.SoDEmployeeAndVisitor"/>
+<fullyQualifiedTypeName name="queries.SoDEmployeeAndContractor"/>
+<fullyQualifiedTypeName name="queries.AccessRelation"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rbac:Policy xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:rbac="http://www.example.org/rbac">
+  <users name="Amy"/>
+  <users name="Bart"/>
+  <users name="Christine"/>
+  <users name="Dave"/>
+  <users name="Emily"/>
+  <users name="Frank"/>
+  <users name="Grace"/>
+  <users name="Hank"/>
+  <users name="Isaac"/>
+  <users name="Julia"/>
+  <roles name="Visitor"/>
+  <roles name="Employee"/>
+  <roles name="Contractor"/>
+  <roles name="Guard"/>
+  <roles name="Cleaner"/>
+  <roles name="Operator"/>
+  <roles name="Operatons"/>
+</rbac:Policy>

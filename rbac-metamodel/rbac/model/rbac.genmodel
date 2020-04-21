@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/rbac/src-gen" creationIcons="false" editDirectory="/rbac.edit/src-gen"
+    editorDirectory="/rbac.editor/src-gen" modelPluginID="rbac" modelName="Rbac" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>rbac.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Rbac" basePackage="com.hans.rbac.model" disposableProviderFactory="true"
+      ecorePackage="rbac.ecore#/">
+    <genClasses ecoreClass="rbac.ecore#//User">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rbac.ecore#//User/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rbac.ecore#//User/UR"/>
+    </genClasses>
+    <genClasses ecoreClass="rbac.ecore#//Role">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rbac.ecore#//Role/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rbac.ecore#//Role/RD"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rbac.ecore#//Role/seniors"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rbac.ecore#//Role/juniors"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rbac.ecore#//Role/RU"/>
+    </genClasses>
+    <genClasses ecoreClass="rbac.ecore#//Permission">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rbac.ecore#//Permission/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rbac.ecore#//Permission/PD"/>
+    </genClasses>
+    <genClasses ecoreClass="rbac.ecore#//Policy">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rbac.ecore#//Policy/users"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rbac.ecore#//Policy/roles"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rbac.ecore#//Policy/permissions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rbac.ecore#//Policy/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rbac.ecore#//Policy/demarcations"/>
+    </genClasses>
+    <genClasses ecoreClass="rbac.ecore#//Demarcation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rbac.ecore#//Demarcation/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rbac.ecore#//Demarcation/DP"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rbac.ecore#//Demarcation/subs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rbac.ecore#//Demarcation/sups"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rbac.ecore#//Demarcation/DR"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><plugin>
+  <extension id="Validator" point="org.eclipse.core.runtime.applications">
+    <application cardinality="singleton-global" thread="main" visible="true">
+      <run class="validator.Validator"/>
+    </application>
+  </extension>
+  <extension id="queries.TestQueries" point="org.eclipse.viatra.query.runtime.queryspecification">
+    <group group="org.eclipse.viatra.query.runtime.extensibility.SingletonExtensionFactory:queries.TestQueries" id="queries.TestQueries">
+      <query-specification fqn="queries.policy"/>
+      <query-specification fqn="queries.roleName"/>
+      <query-specification fqn="queries.userShouldHaveARole"/>
+      <query-specification fqn="queries.roleShouldHaveADemarcation"/>
+      <query-specification fqn="queries.demarcationShouldHaveAPermission"/>
+      <query-specification fqn="queries.onlyOneDirector"/>
+      <query-specification fqn="queries.onlyOneRnDManager"/>
+      <query-specification fqn="queries.onlyOneOperationsManager"/>
+      <query-specification fqn="queries.SoDEmployeeAndContractor"/>
+      <query-specification fqn="queries.SoDEmployeeAndVisitor"/>
+      <query-specification fqn="queries.PrerequisiteEveryHasAccessToLobby"/>
+      <query-specification fqn="queries.PrerequisiteVaultImpliesOpenOffice"/>
+      <query-specification fqn="queries.accessRelation"/>
+    </group>
+  </extension>
+</plugin>

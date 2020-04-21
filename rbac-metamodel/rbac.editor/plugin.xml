@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated rbac -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="com.hans.rbac.model.rbac.presentation.RbacModelWizardID"
+            name="%_UI_RbacModelWizard_label"
+            class="com.hans.rbac.model.rbac.presentation.RbacModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/RbacModelFile.gif">
+         <description>%_UI_RbacModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated rbac -->
+      <editor
+            id="com.hans.rbac.model.rbac.presentation.RbacEditorID"
+            name="%_UI_RbacEditor_label"
+            icon="icons/full/obj16/RbacModelFile.gif"
+            extensions="rbac"
+            class="com.hans.rbac.model.rbac.presentation.RbacEditor"
+            contributorClass="com.hans.rbac.model.rbac.presentation.RbacActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

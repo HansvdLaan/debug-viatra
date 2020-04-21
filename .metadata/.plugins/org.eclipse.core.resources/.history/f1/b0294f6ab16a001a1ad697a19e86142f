@@ -1,0 +1,93 @@
+package queries
+
+// EPackage import
+import "http://www.example.org/rbac"
+
+// Policy
+pattern policy(policy: Policy) {
+    // Type constraint stating that variables 'host' and 'ip' are connected via a 'nodeIp' attribute
+    Policy(policy);
+}
+
+// Role Name
+pattern roleName(role: Role, name : java String) {
+    // Type constraint stating that variables 'host' and 'ip' are connected via a 'nodeIp' attribute
+    Role.name(role,name);
+}
+
+// ----- Example Cardinality Constraints -----
+
+pattern userShouldHaveARole(user: User) {
+    neg User.UR(user, _);
+}
+pattern roleShouldHaveADemarcation(role: Role) {
+    neg Role.RD(role, _);
+}
+pattern demarcationShouldHaveAPermission(dem: Demarcation) {
+    neg Demarcation.DP(dem, _);
+}
+
+pattern onlyOneDirector(role:Role) {
+	Role.name(role, "Director");
+	n == count Role.RU(role, _);
+	check(n >= 2);
+}
+
+pattern onlyOneRnDManager(role:Role) {
+	Role.name(role, "RnD_Manager");
+	n == count Role.RU(role, _);
+	check(n >= 2);
+}
+
+pattern onlyOneOperationsManager(role:Role) {
+	Role.name(role, "Operations_Manager");
+	n == count Role.RU(role, _);
+	check(n >= 2);
+}
+
+// ------------------------------------------
+
+
+// ----- Example Static SoD constraints -----
+
+pattern SoDEmployeeAndContractor(userE: User, userC: User, employee : Role, contractor : Role) {
+    Role.name(employee, "Employee");
+    Role.name(contractor, "Contractor");
+   	Role.RU(employee, userE);
+   	Role.RU(contractor, userC);
+    userE==userC;
+}
+
+pattern SoDEmployeeAndVisitor(userE: User, userV: User, employee : Role, visitor : Role) {
+    Role.name(employee, "Employee");
+    Role.name(visitor, "Visitor");
+   	Role.RU(employee, userE);
+   	Role.RU(visitor, userV);
+    userE==userV;
+}
+
+// ------------------------------------------
+
+
+// ----- Example Prerequiste Constraints -----
+
+pattern PrerequisiteEveryHasAccessToLobby(user: User) {
+	Permission.name(pLobby,"Lobby");
+    find accessRelation(user, pLobby);
+}
+
+
+// ------------------------------------------
+
+
+// ----- Access Relation -----
+
+pattern accessRelation(user: User, permission: Permission) {
+    User.UR(user,role);
+    Role.RD(role, demarcation);
+   	Demarcation.DP(demarcation, permission);
+}
+
+// ------------------------------------------
+
+

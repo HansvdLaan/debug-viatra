@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rbac:Policy xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:rbac="http://www.example.org/rbac" Name="Test">
+  <user Name="U1" UR="//@role.0 //@role.1"/>
+  <user Name="U2" UR="//@role.0"/>
+  <user Name="U3" UR="//@role.1"/>
+  <role Name="R1"/>
+  <role Name="R2"/>
+  <permission Name="P1"/>
+  <permission Name="P2"/>
+  <permission Name="P3"/>
+</rbac:Policy>

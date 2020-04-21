@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rbac:Policy xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:rbac="http://www.example.org/rbac">
+  <users name="Amy" UR="//@roles.9"/>
+  <users name="Bart" UR="//@roles.8"/>
+  <users name="Christine" UR="//@roles.6"/>
+  <users name="Dave" UR="//@roles.7"/>
+  <users name="Emily" UR="//@roles.7 //@roles.5"/>
+  <users name="Frank" UR="//@roles.5"/>
+  <users name="Grace" UR="//@roles.3"/>
+  <users name="Hank" UR="//@roles.3"/>
+  <users name="Isaac" UR="//@roles.4"/>
+  <users name="Julia" UR="//@roles.0"/>
+  <users name="Kevin - Test"/>
+  <roles name="Visitor" RD="//@demarcations.5"/>
+  <roles name="Employee" RD="//@demarcations.1 //@demarcations.3" seniors="//@roles.7 //@roles.5"/>
+  <roles name="Contractor" seniors="//@roles.4 //@roles.3"/>
+  <roles name="Guard" RD="//@demarcations.4" juniors="//@roles.2"/>
+  <roles name="Cleaner" RD="//@demarcations.0" juniors="//@roles.2"/>
+  <roles name="Operator" seniors="//@roles.6" juniors="//@roles.1"/>
+  <roles name="Operations Manager" RD="//@demarcations.7 //@demarcations.8" seniors="//@roles.9" juniors="//@roles.5"/>
+  <roles name="Designer" RD="//@demarcations.2" seniors="//@roles.8" juniors="//@roles.1"/>
+  <roles name="RnDManager" RD="//@demarcations.7 //@demarcations.8" seniors="//@roles.9" juniors="//@roles.7"/>
+  <roles name="Director" RD="//@demarcations.9" juniors="//@roles.6 //@roles.8"/>
+  <permissions name="Lobby"/>
+  <permissions name="Workshop"/>
+  <permissions name="OpenOffice"/>
+  <permissions name="Restaurant"/>
+  <permissions name="Storage"/>
+  <permissions name="MeetingRoom1"/>
+  <permissions name="MeetingRoom2"/>
+  <permissions name="Office1"/>
+  <permissions name="Office2"/>
+  <permissions name="Vault"/>
+  <permissions name="Toilets"/>
+  <demarcations name="Cleaning" DP="//@permissions.7 //@permissions.8 //@permissions.1" subs="//@demarcations.1"/>
+  <demarcations name="Working" DP="//@permissions.0 //@permissions.5 //@permissions.6 //@permissions.2 //@permissions.3 //@permissions.10" sups="//@demarcations.0 //@demarcations.2 //@demarcations.3 //@demarcations.6 //@demarcations.7 //@demarcations.8 //@demarcations.4"/>
+  <demarcations name="Designing" DP="//@permissions.1 //@permissions.4" subs="//@demarcations.1"/>
+  <demarcations name="Meeting" subs="//@demarcations.1"/>
+  <demarcations name="Guarding" DP="//@permissions.7 //@permissions.8 //@permissions.4 //@permissions.1" subs="//@demarcations.1"/>
+  <demarcations name="Visiting" DP="//@permissions.0 //@permissions.10 //@permissions.1"/>
+  <demarcations name="ManagingFinances" DP="//@permissions.9" subs="//@demarcations.1 //@demarcations.9"/>
+  <demarcations name="ManagingPeople" DP="//@permissions.8 //@permissions.7" subs="//@demarcations.1 //@demarcations.9"/>
+  <demarcations name="ManagingStock" DP="//@permissions.4 //@permissions.1" subs="//@demarcations.1 //@demarcations.9"/>
+  <demarcations name="Managing" sups="//@demarcations.6 //@demarcations.7 //@demarcations.8"/>
+</rbac:Policy>

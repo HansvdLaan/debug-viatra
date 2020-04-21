@@ -1,0 +1,27 @@
+package queries
+
+// EPackage import
+import "http://www.example.org/rbac"
+
+// Role Name
+pattern roleName(role: Role, name : java String) {
+    // Type constraint stating that variables 'host' and 'ip' are connected via a 'nodeIp' attribute
+    Role.name(role,name);
+}
+
+// ----- Example Cardinality Constraints -----
+
+pattern userShouldHaveARole(user: User) {
+    neg User.UR(user, _);
+}
+
+
+pattern accessRelation(user: User, permission: Permission) {
+    User.UR(user,role);
+    Role.RD(role, demarcation);
+   	Demarcation.DP(demarcation, permission);
+}
+
+// ------------------------------------------
+
+

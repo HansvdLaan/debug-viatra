@@ -1,0 +1,23 @@
+package queries
+
+// EPackage import
+import "http://www.example.org/rbac"
+
+pattern policy(policy: Policy) {
+    Policy(policy);
+}
+
+pattern roleName(role: Role, name : java String) {
+    Role.name(role,name);
+}
+
+pattern userShouldHaveARole(user: User) {
+    neg User.UR(user, _);
+}
+
+pattern accessRelation(user: User, permission: Permission) {
+    User.UR(user,role);
+    Role.RD(role, demarcation);
+   	Demarcation.DP(demarcation, permission);
+}
+

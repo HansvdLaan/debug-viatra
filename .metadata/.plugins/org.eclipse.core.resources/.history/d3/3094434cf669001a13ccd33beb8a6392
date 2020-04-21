@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rbac:Policy xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:rbac="http://www.example.org/rbac">
+  <users name="Amy"/>
+  <users name="Bart"/>
+  <users name="Christine"/>
+  <users name="Dave"/>
+  <users name="Emily"/>
+  <users name="Frank"/>
+  <users name="Grace"/>
+  <users name="Hank"/>
+  <users name="Isaac"/>
+  <users name="Julia"/>
+  <roles name="Visitor" RD="//@demarcations.5"/>
+  <roles name="Employee" RD="//@demarcations.1 //@demarcations.3"/>
+  <roles name="Contractor"/>
+  <roles name="Guard" RD="//@demarcations.4"/>
+  <roles name="Cleaner" RD="//@demarcations.0"/>
+  <roles name="Operator"/>
+  <roles name="Operations Manager" RD="//@demarcations.7 //@demarcations.8"/>
+  <roles name="Designer" RD="//@demarcations.2"/>
+  <roles name="RnDManager" RD="//@demarcations.7 //@demarcations.8"/>
+  <roles name="Director" RD="//@demarcations.9"/>
+  <permissions name="Lobby"/>
+  <permissions name="Workshop"/>
+  <permissions name="OpenOffice"/>
+  <permissions name="Restaurant"/>
+  <permissions name="Storage"/>
+  <permissions name="MeetingRoom1"/>
+  <permissions name="MeetingRoom2"/>
+  <permissions name="Office1"/>
+  <permissions name="Office2"/>
+  <permissions name="Vault"/>
+  <permissions name="Toilets"/>
+  <demarcations name="Cleaning" DP="//@permissions.7 //@permissions.8 //@permissions.1"/>
+  <demarcations name="Working" DP="//@permissions.0 //@permissions.5 //@permissions.6 //@permissions.2 //@permissions.3 //@permissions.10"/>
+  <demarcations name="Designing" DP="//@permissions.1 //@permissions.4"/>
+  <demarcations name="Meeting"/>
+  <demarcations name="Guarding" DP="//@permissions.7 //@permissions.8 //@permissions.4 //@permissions.1"/>
+  <demarcations name="Visiting" DP="//@permissions.0 //@permissions.10 //@permissions.1"/>
+  <demarcations name="ManagingFinances" DP="//@permissions.9"/>
+  <demarcations name="ManagingPeople" DP="//@permissions.8 //@permissions.7"/>
+  <demarcations name="ManagingStock" DP="//@permissions.4 //@permissions.1"/>
+  <demarcations name="Managing"/>
+</rbac:Policy>
